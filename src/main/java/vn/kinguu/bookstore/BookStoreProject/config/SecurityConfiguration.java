@@ -15,15 +15,17 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import vn.kinguu.bookstore.BookStoreProject.utility.SecurityUtility;
+
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter  {
 
 
-	@Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+	private BCryptPasswordEncoder passwordEncoder() {
+        return SecurityUtility.passwordEncoder();
     }
 
 
