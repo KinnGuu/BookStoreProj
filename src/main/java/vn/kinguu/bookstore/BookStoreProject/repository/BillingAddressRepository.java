@@ -2,6 +2,8 @@ package vn.kinguu.bookstore.BookStoreProject.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BillingAddressRepository extends JpaRepository<BillingAddressRepository, Long> {
+import vn.kinguu.bookstore.BookStoreProject.domain.BillingAddress;
+
+public interface BillingAddressRepository extends JpaRepository<BillingAddress, Long> {
 
 }

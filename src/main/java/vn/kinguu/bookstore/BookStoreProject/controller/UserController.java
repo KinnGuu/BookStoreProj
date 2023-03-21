@@ -18,29 +18,29 @@ import vn.kinguu.bookstore.BookStoreProject.service.dto.LoginFormDTO;
 @Controller
 public class UserController {
 	
-	@Autowired
-	UserRepository userRepository;
-	@Autowired
-	UserServiceImpl userService;
-	
-	@GetMapping("/getListUser")
-	public List<User> getListUser(){
-		return userService.getUserDetail();
-	}
-	
-	@PostMapping("register")
-	public User createNewUserAccount(@RequestBody LoginFormDTO loginDTO) {
-		return userService.createUserAccount(loginDTO);
-	}
-	
-	@RequestMapping("/adminhome")
-    public String home() {
-        return "adminhome";
-    }
-	
-	@RequestMapping("/login")
-    public String login(Model model) {
-        model.addAttribute("classActiveLogin", true);
-        return "myAccount";
-    }
+//	@Autowired
+//	UserRepository userRepository;
+//	@Autowired
+//	UserServiceImpl userService;
+//	
+//	@GetMapping("/getListUser")
+//	public List<User> getListUser(){
+//		return userService.getUserDetail();
+//	}
+//	
+//	@PostMapping("register")
+//	public User createNewUserAccount(@RequestBody LoginFormDTO loginDTO) {
+//		return userService.createUserAccount(loginDTO);
+//	}
+//	
+//	@RequestMapping("/adminhome")
+//    public String home() {
+//        return "adminhome";
+//    }
+//	
+//	@RequestMapping("/login")
+//    public String login(Model model) {
+//        model.addAttribute("classActiveLogin", true);
+//        return "myAccount";
+//    }
 }
