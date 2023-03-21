@@ -25,8 +25,6 @@ public class UserServiceImpl implements UserService {
 		User user = new User();
 		user.setUsername(dto.getUsername());
 		user.setPassword(dto.getPassword());
-		user.setRole("ROLE_USER");
-		user.setFirstLogin(true);
 		user.setEmail(dto.getEmail());
 		return userRepository.save(user);
 	}
